@@ -2,17 +2,13 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Product from '../Product/Product';
 
+
 const Products = (props) => {
-    const { handleAddToCart } = props;
-
-    const [products, setProducts] = useState([]);
+    const { handleAddToCart, products } = props;
 
 
-    useEffect(() => {
-        fetch('/products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, []);
+
+
 
 
     return (
